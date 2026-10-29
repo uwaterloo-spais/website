@@ -1,0 +1,35 @@
+---
+import { getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+// A button that opens the shared GalleryDialog. Wrap any content (usually an
+// <Image>) in it; the album's photos are optimized here at build time.
+interface Props {
+  title: string;
+  source?: string;
+  photos: { src: ImageMetadata; alt: string }[];
+  start?: number;
+  label: string;
+  class?: string;
+}
+
+const { title, source, photos, start = 0, label, class: className } = Astro.props;
+
+const optimized = await Promise.all(
+  photos.map(async (p) => ({
+    src: (await getImage({ src: p.src, width: 1600, format: 'webp' })).src,
+    alt: p.alt,
+  })),
+);
+---
+
+<button
+  type="button"
+  class:list={['group relative block w-full cursor-pointer text-left', className]}
+  data-album={JSON.stringify({ title, source, photos: optimized })}
+  data-photo={start}
+  aria-label={label}
+  aria-haspopup="dialog"
+>
+  <slot />
+</button>

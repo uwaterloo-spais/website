@@ -1,0 +1,67 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import GalleryButton from '../GalleryButton.astro';
+import { site } from '../../data/site';
+
+const updates = (await getCollection('updates')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const fmt = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+---
+
+<section id="updates" class="bg-silver-50 py-24 md:py-32" aria-labelledby="updates-title">
+  <div class="wrap">
+    <div class="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end" data-reveal>
+      <div>
+        <p class="eyebrow">04 / Beyond the lab</p>
+        <h2 id="updates-title" class="display-lg">A community in motion.</h2>
+      </div>
+      <a class="text-link self-start md:self-auto" href={site.links.linkedin} target="_blank" rel="noopener noreferrer">
+        Follow our journey <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+
+    <div class="grid gap-10 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
+      {
+        updates.map((u, i) => {
+          const cover = u.data.photos[u.data.cover] ?? u.data.photos[0];
+          const n = u.data.photos.length;
+          return (
+            <article class="flex flex-col" data-reveal style={`--reveal-delay:${i * 90}ms`}>
+              <GalleryButton
+                title={u.data.albumTitle}
+                source={u.data.source}
+                photos={u.data.photos}
+                start={u.data.cover}
+                label={`View the album: ${u.data.albumTitle}`}
+                class="overflow-hidden rounded-xl"
+              >
+                <Image
+                  src={cover.src}
+                  alt={cover.alt}
+                  widths={[480, 800]}
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  class="aspect-[1.45] w-full object-cover transition-transform duration-700 ease-out-soft group-hover:scale-[1.04]"
+                />
+                <span class="absolute bottom-3 right-3 flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-[11px] text-ink backdrop-blur">
+                  View {n} {n === 1 ? 'photo' : 'photos'} <span aria-hidden="true">↗</span>
+                </span>
+              </GalleryButton>
+              <div class="mb-3 mt-6 flex items-center gap-2.5 text-[11px] uppercase tracking-[0.1em] text-silver-500">
+                {u.data.category}
+                <span class="size-0.5 rounded-full bg-silver-400" aria-hidden="true" />
+                <time datetime={u.data.date.toISOString().slice(0, 10)}>{fmt.format(u.data.date)}</time>
+              </div>
+              <h3 class="text-[22px] font-semibold leading-[1.3] tracking-[-0.02em]">{u.data.title}</h3>
+              <p class="mb-5 mt-3 text-[14px] leading-[1.8] text-muted">{u.data.summary}</p>
+              {u.data.source && (
+                <a class="text-link mt-auto self-start text-[12px]" href={u.data.source} target="_blank" rel="noopener noreferrer">
+                  {u.data.sourceLabel} <span aria-hidden="true">↗</span>
+                </a>
+              )}
+            </article>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>

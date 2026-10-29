@@ -1,0 +1,58 @@
+---
+import { Image } from 'astro:assets';
+import { getEntry } from 'astro:content';
+import GalleryButton from '../GalleryButton.astro';
+
+const farm = await getEntry('updates', '2026-10-23-hoffmans-strawberries');
+const photo = farm!.data.photos[1];
+---
+
+<section id="about" class="bg-deep py-24 text-white md:py-32" aria-labelledby="about-title">
+  <div class="wrap grid items-center gap-14 md:grid-cols-[0.95fr_1.05fr] lg:gap-28">
+    <div data-reveal>
+      <p class="eyebrow !text-silver-400">01 / Our mission</p>
+      <h2 id="about-title" class="display-lg">Intelligence.<br />With purpose.</h2>
+      <p class="mt-8 max-w-[490px] text-[15px] leading-[1.9] text-silver-300">
+        We’re a student-led community at the University of Waterloo, exploring how intelligent systems can make a useful
+        difference in the physical world.
+      </p>
+      <p class="mt-4 max-w-[490px] text-[15px] leading-[1.9] text-silver-300">
+        Through engineering projects, industry visits, and conversations in the field, we bring different disciplines
+        together to learn, build, and ask better questions.
+      </p>
+      <a class="text-link mt-8 text-silver-100" href="#teams">Meet the teams <span aria-hidden="true">↗</span></a>
+      <ul class="mt-12 flex flex-wrap gap-x-6 gap-y-2 border-t border-white/10 pt-6 text-[12px] text-silver-400">
+        <li>Learn together.</li>
+        <li>Build with purpose.</li>
+        <li>Think sustainably.</li>
+      </ul>
+    </div>
+
+    <figure data-reveal style="--reveal-delay:120ms">
+      <GalleryButton
+        title={farm!.data.albumTitle}
+        source={farm!.data.source}
+        photos={farm!.data.photos}
+        start={1}
+        label="View our visit to Hoffman’s Strawberries"
+        class="overflow-hidden rounded-xl"
+      >
+        <Image
+          src={photo.src}
+          alt="SPAIS members learning directly from their host at Hoffman’s Strawberries."
+          widths={[480, 800]}
+          sizes="(min-width: 768px) 50vw, 100vw"
+          class="aspect-[1.2] w-full object-cover saturate-[.8] transition-transform duration-700 ease-out-soft group-hover:scale-[1.03]"
+        />
+        <span
+          class="absolute bottom-4 right-4 grid size-10 place-items-center rounded-full bg-white/90 text-lg text-ink"
+          aria-hidden="true">↗</span
+        >
+      </GalleryButton>
+      <figcaption class="mt-5 text-[13px] text-silver-100">
+        Good design starts with listening.
+        <span class="mt-1 block text-[11px] text-silver-500">Hoffman’s Strawberries · October 2026</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
