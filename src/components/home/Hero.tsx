@@ -27,8 +27,8 @@ export default function Hero({ farmAlbum }: { farmAlbum?: Album }) {
           </h1>
           <p className="lede mt-8 max-w-[520px] text-silver">
             One of Canada’s first student societies dedicated to Physical AI, run by students for
-            students. Started at the {site.university} and growing beyond it, we’re building robots
-            for sustainable agriculture, starting with the people who grow our food.
+            students. Started at the {site.university} and growing beyond it, we build intelligent
+            machines for the real world, with agriculture as our first project.
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Link href="/project/" className="btn btn-primary">
