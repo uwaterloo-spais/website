@@ -10,21 +10,21 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="bg-black pb-10 pt-20 text-white">
+    <footer className="border-t border-white/10 bg-black pb-10 pt-14 text-white">
       <div className="wrap">
-        <Link href="/" aria-label="SPAIS home" className="block">
-          {/* eslint-disable-next-line @next/next/no-img-element -- static export */}
-          <img
-            src={asset("brand/spais-wordmark-white.png")}
-            alt="SPAIS"
-            width={1022}
-            height={163}
-            className="h-auto w-full max-w-[880px]"
-          />
-        </Link>
-        <div className="mt-12 grid gap-10 border-t border-white/15 pt-8 md:grid-cols-[1fr_auto]">
+        <div className="grid gap-10 md:grid-cols-[1fr_auto]">
           <div>
-            <p className="text-[15px] text-white">{site.fullName}</p>
+            <Link href="/" aria-label="SPAIS home" className="inline-block">
+              {/* eslint-disable-next-line @next/next/no-img-element -- static export */}
+              <img
+                src={asset("brand/spais-wordmark-white.png")}
+                alt="SPAIS"
+                width={1022}
+                height={163}
+                className="h-auto w-[140px]"
+              />
+            </Link>
+            <p className="mt-6 text-[15px] text-white">{site.fullName}</p>
             <p className="text-[15px] text-silver">A student-led community at the {site.university}.</p>
             <a href={`mailto:${site.email}`} className="mt-4 inline-block text-[15px] text-white underline-offset-4 hover:underline">
               {site.email}
