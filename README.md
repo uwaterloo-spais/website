@@ -65,7 +65,7 @@ Photos without an entry simply show no overlay.
 ## Deployment
 
 - **GitHub Pages (mirror):** every push to `main` builds and deploys through `.github/workflows/deploy.yml`, with `NEXT_PUBLIC_BASE_PATH=/website`.
-- **Vercel (main site, https://uwspais.ca):** the `spais-website` project is connected to this repo, so every push to `main` deploys and every pull request gets a preview link. `vercel.json` redirects `www.uwspais.ca` to `uwspais.ca`.
+- **Vercel (main site, https://uwspais.ca):** the `spais-website` project is connected to this repo, so every push to `main` deploys and every pull request gets a preview link. `www.uwspais.ca` redirects to `uwspais.ca` (set in Vercel → Settings → Domains).
 - **DNS:** `uwspais.ca` is registered through Namecheap. Its records point at Vercel: `A @ 216.198.79.1`, `A @ 64.29.17.1`, and `CNAME www cd8f13fc59607241.vercel-dns-017.com`.
 
 ## Photo credits
