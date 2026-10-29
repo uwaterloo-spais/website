@@ -6,7 +6,7 @@ import { photo } from "@/lib/site";
 const facts = [
   { label: "Stage", value: "Discovery & concept development" },
   { label: "First application", value: "Agriculture" },
-  { label: "Under study", value: "Greenhouse crop care" },
+  { label: "Under study", value: "Weeding & disease control" },
 ];
 
 export default function ProjectTeaser() {

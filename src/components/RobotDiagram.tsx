@@ -152,7 +152,7 @@ export default function RobotDiagram({ highlight = null, visible = {}, onSelect,
         <path d="m438 150 21-14 12 8-8 19-19-2M459 136l13-9M463 163l14 3" stroke={INK} strokeWidth="5" strokeLinecap="round" />
       </motion.g>
 
-      {/* detections: what the robot sees on the target leaf */}
+      {/* detections: a sign of disease the robot spots on a leaf */}
       <motion.g {...layer("detections", 0)}>
         <g stroke={SIGNAL} strokeWidth="2.5">
           <path d="M470 130v-10h10M560 120h10v10M570 160v10h-10M480 170h-10v-10" />
@@ -160,7 +160,7 @@ export default function RobotDiagram({ highlight = null, visible = {}, onSelect,
         <rect x="470" y="120" width="100" height="50" stroke={SIGNAL} strokeOpacity=".35" />
         <rect x="470" y="104" width="104" height="16" fill={SIGNAL} />
         <text x="475" y="115.5" fontFamily="var(--font-jetbrains), monospace" fontSize="10" fill="#000">
-          tomato_leaf 0.91
+          leaf_spot 0.91
         </text>
       </motion.g>
     </svg>

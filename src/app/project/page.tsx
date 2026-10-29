@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 const facts = [
   { term: "Project", value: "Modular mobile robot" },
-  { term: "First application", value: "Greenhouse crop care" },
+  { term: "First application", value: "Outdoor weeding & disease control" },
   { term: "Near-term goal", value: "A testable, limited-scope prototype" },
 ];
 
@@ -27,7 +27,7 @@ const questions = [
   },
   {
     title: "What does a good result look like?",
-    body: "Define acceptable crop handling, cutting quality, and when a task needs human judgement.",
+    body: "Define what good weed removal and disease spotting look like, and when a task needs human judgement.",
   },
   {
     title: "What fits the space?",
@@ -101,9 +101,9 @@ export default function ProjectPage() {
               the space, and the people working around it.
             </p>
             <p className="mt-5 max-w-[56ch] text-[16px] leading-[1.7] text-steel">
-              For our first application, one candidate task is tomato leaf removal, with targeted wound protection when appropriate. We’re
-              evaluating this direction alongside the practical requirements of the mobile platform. The final task
-              will be shaped by grower input and early testing.
+              Fieldwork at Hoffman’s Strawberries pointed us to two needs the farm’s owner described as real pain
+              points: weeding and crop disease control. We’ll start testing outdoors, in the same conditions as
+              on-site trials at the farm. The final task will be shaped by grower input and early testing.
             </p>
           </div>
 
@@ -136,7 +136,7 @@ export default function ProjectPage() {
           <div className="mt-14 grid gap-3 border-l-2 border-black py-1 pl-6 md:grid-cols-[auto_minmax(0,1fr)] md:gap-10">
             <p className="text-[16px] font-semibold">Research direction, not a product claim.</p>
             <p className="max-w-[70ch] text-[16px] leading-[1.65] text-steel">
-              Autonomy, task completion, labour savings, and real-world benefits will need to be measured. Any wound-treatment
+              Autonomy, task completion, labour savings, and real-world benefits will need to be measured. Any disease-control
               function depends on an appropriate agronomic protocol.
             </p>
           </div>
@@ -167,9 +167,9 @@ export default function ProjectPage() {
           <div>
             <h2 className="h-section max-w-[14ch]">Our classroom extends to the field.</h2>
             <p className="lede mt-8 max-w-[48ch] text-steel">
-              Our October 23 visit to Hoffman’s Strawberries was an opportunity to ask questions and learn about the
-              work behind food production. These conversations help us approach engineering with a better
-              understanding of real needs.
+              On our October 23 visit to Hoffman’s Strawberries, the owner walked us through the work behind the
+              harvest. Weeding and crop disease control came up as everyday challenges, and they now shape our
+              first task.
             </p>
             <a
               href={farm?.source}
