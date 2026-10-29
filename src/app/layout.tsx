@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { GalleryProvider } from "@/components/Gallery";
@@ -52,6 +53,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main id="main">{children}</main>
           <Footer />
         </GalleryProvider>
+        {/* Vercel Web Analytics. Only on Vercel builds: the GitHub Pages mirror has no /_vercel endpoint. */}
+        {process.env.VERCEL && <Analytics />}
       </body>
     </html>
   );
