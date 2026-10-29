@@ -3,7 +3,7 @@ export const site = {
   name: "SPAIS",
   fullName: "Sustainable Physical AI Society",
   university: "University of Waterloo",
-  url: "https://uwaterloo-spais.github.io/website",
+  url: "https://uwspais.ca",
   description:
     "The Sustainable Physical AI Society is a student-led community at the University of Waterloo. Learn, build, and explore robotics for a sustainable future.",
   email: "uwspais@gmail.com",

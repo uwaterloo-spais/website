@@ -3,7 +3,7 @@
 The website of the **Sustainable Physical AI Society** at the University of Waterloo.
 Built with [Next.js](https://nextjs.org) (static export), [Tailwind CSS](https://tailwindcss.com), and [Motion](https://motion.dev).
 
-**Live site:** https://uwaterloo-spais.github.io/website/
+**Live site:** https://uwspais.ca
 
 ## Run it locally
 
@@ -64,8 +64,9 @@ Photos without an entry simply show no overlay.
 
 ## Deployment
 
-- **GitHub Pages:** every push to `main` builds and deploys through `.github/workflows/deploy.yml`, with `NEXT_PUBLIC_BASE_PATH=/website`.
-- **Vercel:** import the repository; the defaults work (no base path needed).
+- **GitHub Pages (mirror):** every push to `main` builds and deploys through `.github/workflows/deploy.yml`, with `NEXT_PUBLIC_BASE_PATH=/website`.
+- **Vercel (main site, https://uwspais.ca):** the `spais-website` project is connected to this repo, so every push to `main` deploys and every pull request gets a preview link. `vercel.json` redirects `www.uwspais.ca` to `uwspais.ca`.
+- **DNS:** `uwspais.ca` is registered through Namecheap. Its records point at Vercel: `A @ 216.198.79.1`, `A @ 64.29.17.1`, and `CNAME www cd8f13fc59607241.vercel-dns-017.com`.
 
 ## Photo credits
 
