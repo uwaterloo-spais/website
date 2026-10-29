@@ -21,7 +21,7 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "SPAIS — Bringing AI into the real world",
+    default: "SPAIS",
     template: "%s — SPAIS",
   },
   description: site.description,
