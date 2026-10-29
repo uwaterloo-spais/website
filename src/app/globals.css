@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+/*
+ * SPAIS — "the robot's eye".
+ * Black, white, and silver from the logo. One signal colour, used only for
+ * what the machine "sees": detection boxes, labels, scan lines, focus.
+ */
+@theme {
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-graphite: #16181b;
+  --color-steel: #2c3036;
+  --color-silver: #a8aeb6;
+  --color-fog: #d9dde2;
+  --color-mist: #eef0f2;
+  --color-signal: #2de2ff;
+  --color-signal-dim: #2de2ff33;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+  body {
+    @apply bg-white font-sans text-black antialiased;
+  }
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    background: var(--color-signal);
+    color: #000;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 3px;
+  }
+}
+
+@utility wrap {
+  @apply mx-auto w-full max-w-[1360px] px-5 sm:px-8 lg:px-12;
+}
+
+/* Display type: Archivo stretched wide, echoing the slanted SPAIS wordmark. */
+@utility display {
+  font-stretch: 125%;
+  @apply font-semibold leading-[0.98] tracking-[-0.02em];
+}
+
+@utility h-hero {
+  @apply display text-[clamp(44px,8.2vw,128px)];
+}
+
+@utility h-section {
+  @apply display text-[clamp(34px,5vw,72px)];
+}
+
+@utility h-card {
+  font-stretch: 112%;
+  @apply text-[22px] font-semibold leading-tight tracking-[-0.01em];
+}
+
+@utility lede {
+  @apply text-[17px] leading-[1.6] md:text-[19px];
+}
+
+@utility btn {
+  @apply inline-flex min-h-12 items-center justify-center gap-3 rounded-full px-6 text-[15px] font-medium transition-colors duration-200;
+}
+
+@utility btn-primary {
+  @apply bg-white text-black hover:bg-signal;
+}
+
+@utility btn-primary-dark {
+  @apply bg-black text-white hover:bg-steel;
+}
+
+@utility btn-ghost {
+  @apply border border-white/30 text-white hover:border-white;
+}
+
+@utility btn-ghost-dark {
+  @apply border border-black/20 text-black hover:border-black;
+}
+
+/* Model-output style text: only for machine-vision UI. */
+@utility readout {
+  @apply font-mono text-[11px] leading-none tracking-tight;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
