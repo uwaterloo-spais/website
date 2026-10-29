@@ -5,7 +5,7 @@ import { photo } from "@/lib/site";
 
 const facts = [
   { label: "Stage", value: "Discovery & concept development" },
-  { label: "Current focus", value: "Farm needs & platform design" },
+  { label: "First application", value: "Agriculture" },
   { label: "Under study", value: "Greenhouse crop care" },
 ];
 
@@ -20,8 +20,8 @@ export default function ProjectTeaser() {
             To the field.
           </h2>
           <p className="lede mt-8 max-w-[520px] text-steel">
-            Our first engineering project is a compact, modular mobile robot for precision crop care.
-            We’re starting with growers’ experience and a carefully defined task.
+            Our first engineering project is a compact, modular mobile robot. We’re starting with
+            agriculture, growers’ experience, and a carefully defined task.
           </p>
           <dl className="mt-10 grid gap-4 border-t border-black/10 pt-6 sm:grid-cols-3">
             {facts.map((f) => (
@@ -35,7 +35,7 @@ export default function ProjectTeaser() {
             Explore the project
           </Link>
           <p className="mt-6 max-w-[520px] text-[14px] text-black/55">
-            Our goal is a useful, testable prototype. Field performance and crop-care benefits are
+            Our goal is a useful, testable prototype. Field performance and real-world benefits are
             still to be validated.
           </p>
         </div>

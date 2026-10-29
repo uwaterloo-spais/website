@@ -49,7 +49,7 @@ export const teams = [
     part: "arm" as TeamPart,
     partLabel: "Arm & chassis",
     short: "Give our ideas a physical form.",
-    body: "Help develop the mobile platform, mechanisms, and task tools. Explore how real farm conditions translate into practical design decisions.",
+    body: "Help develop the mobile platform, mechanisms, and task tools. Explore how real-world conditions translate into practical design decisions.",
     tags: ["CAD", "Mechanisms", "Prototyping", "Fabrication"],
   },
   {
@@ -67,7 +67,7 @@ export const teams = [
     part: "camera" as TeamPart,
     partLabel: "Camera & sensing",
     short: "Help the robot understand its surroundings.",
-    body: "Explore camera systems, data collection, and visual understanding. Study how a robot can recognise relevant crop features in changing conditions.",
+    body: "Explore camera systems, data collection, and visual understanding. Study how a robot can recognise what matters to its task in changing conditions.",
     tags: ["Computer vision", "AI", "Datasets", "3D sensing"],
   },
   {

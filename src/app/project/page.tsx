@@ -9,29 +9,29 @@ import { photo } from "@/lib/site";
 import { getUpdates } from "@/lib/updates";
 
 export const metadata: Metadata = {
-  title: "Agricultural robotics project",
+  title: "Our first project",
   description:
-    "Explore SPAIS’s first agricultural robotics project: a modular mobile platform shaped by real farm needs. Discover our concept, research questions, and prototype goals.",
+    "Explore SPAIS’s first Physical AI project: a modular mobile robot, starting with agriculture and built to adapt to other real-world settings. Discover our concept, research questions, and prototype goals.",
 };
 
 const facts = [
-  { term: "Project", value: "Modular agricultural robotics" },
-  { term: "Application under study", value: "Greenhouse crop care" },
+  { term: "Project", value: "Modular mobile robot" },
+  { term: "First application", value: "Greenhouse crop care" },
   { term: "Near-term goal", value: "A testable, limited-scope prototype" },
 ];
 
 const questions = [
   {
     title: "What actually takes time?",
-    body: "Understand recurring tasks, current tools, and the labour involved in completing an entire growing row.",
+    body: "Understand recurring tasks, current tools, and the labour involved in getting the job done.",
   },
   {
     title: "What does a good result look like?",
     body: "Define acceptable crop handling, cutting quality, and when a task needs human judgement.",
   },
   {
-    title: "What fits the farm?",
-    body: "Measure working heights, aisle access, rails, and the routines the robot would need to work within.",
+    title: "What fits the space?",
+    body: "Measure working heights, access, obstacles, and the routines the robot would need to work within.",
   },
 ];
 
@@ -39,7 +39,7 @@ const measures = [
   "Task completion",
   "Time per target",
   "Human intervention",
-  "Crop handling quality",
+  "Handling quality",
   "Maintenance time",
   "Net labour input",
 ];
@@ -61,16 +61,16 @@ export default function ProjectPage() {
             Discovery & concept development
           </p>
 
-          <h1 className="h-hero mt-6 max-w-[14ch]">Better crop care, built from real needs.</h1>
+          <h1 className="h-hero mt-6 max-w-[14ch]">Physical AI, built from real needs.</h1>
 
           <div className="mt-10 grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,420px)] lg:items-end">
             <div>
               <p className="lede max-w-[46ch] text-fog">
-                We’re developing the foundations of a modular agricultural robot—starting with growers’ experience,
-                a small mobile platform, and a carefully defined task.
+                We’re developing the foundations of a modular mobile robot. Agriculture is our first application:
+                we’re starting with growers’ experience, a small platform, and one carefully defined task.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link href="/#growers" className="btn btn-primary">
+                <Link href="/#join" className="btn btn-primary">
                   Help shape the project ↗
                 </Link>
                 <a href="#roadmap" className="btn btn-ghost">
@@ -97,11 +97,11 @@ export default function ProjectPage() {
           <div>
             <h2 className="h-section max-w-[16ch]">A useful robot starts with a good question.</h2>
             <p className="lede mt-8 max-w-[52ch] text-steel">
-              Crop care combines repetitive work with delicate decisions. A useful robot has to fit the crop, the
-              growing space, and the people working around it.
+              Real-world work combines repetitive tasks with delicate decisions. A useful robot has to fit the task,
+              the space, and the people working around it.
             </p>
             <p className="mt-5 max-w-[56ch] text-[16px] leading-[1.7] text-steel">
-              One candidate task is tomato leaf removal, with targeted wound protection when appropriate. We’re
+              For our first application, one candidate task is tomato leaf removal, with targeted wound protection when appropriate. We’re
               evaluating this direction alongside the practical requirements of the mobile platform. The final task
               will be shaped by grower input and early testing.
             </p>
@@ -136,7 +136,7 @@ export default function ProjectPage() {
           <div className="mt-14 grid gap-3 border-l-2 border-black py-1 pl-6 md:grid-cols-[auto_minmax(0,1fr)] md:gap-10">
             <p className="text-[16px] font-semibold">Research direction, not a product claim.</p>
             <p className="max-w-[70ch] text-[16px] leading-[1.65] text-steel">
-              Autonomy, task completion, labour savings, and crop benefits will need to be measured. Any wound-treatment
+              Autonomy, task completion, labour savings, and real-world benefits will need to be measured. Any wound-treatment
               function depends on an appropriate agronomic protocol.
             </p>
           </div>
@@ -209,11 +209,11 @@ export default function ProjectPage() {
           <div>
             <h2 className="h-section max-w-[18ch]">Have a challenge we should understand?</h2>
             <p className="lede mt-6 max-w-[52ch] text-fog">
-              We’d love to hear from growers, engineers, and mentors who can help turn a promising idea into a useful
-              first build.
+              We’d love to hear from growers, companies, researchers, and mentors who can help turn a promising idea
+              into a useful first build.
             </p>
           </div>
-          <Link href="/#growers" className="btn btn-primary shrink-0 self-start md:self-auto">
+          <Link href="/#join" className="btn btn-primary shrink-0 self-start md:self-auto">
             Let’s talk ↗
           </Link>
         </div>
