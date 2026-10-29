@@ -3,6 +3,7 @@ import Mission from "@/components/home/Mission";
 import Teams from "@/components/home/Teams";
 import ProjectTeaser from "@/components/home/ProjectTeaser";
 import Community from "@/components/home/Community";
+import Partners from "@/components/home/Partners";
 import Join from "@/components/home/Join";
 import { formatDate, getUpdates } from "@/lib/updates";
 
@@ -18,6 +19,7 @@ export default function Home() {
       <Teams />
       <ProjectTeaser />
       <Community updates={updates} />
+      <Partners />
       <Join />
     </>
   );

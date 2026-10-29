@@ -22,3 +22,12 @@ The cover photo and logo were supplied by SPAIS. Other photos come from SPAIS’
 | `public/photos/team-cover-*.webp` | User-provided SPAIS team photo, uploaded October 27, 2026 |
 
 `src/components/RobotDiagram.tsx` (redrawn from the original `platform-concept.svg`) is a concept study, not a photograph of completed hardware.
+
+## Partner logos
+
+| File | Source |
+| --- | --- |
+| `public/partners/upside-robotics.svg` | Wordmark from upsiderobotics.com, shown as a collaborator |
+| `public/partners/waterloo-robohub.png` | Icon from uwaterloo.ca/robohub, shown as a collaborator |
+
+Hoffman’s Strawberries has no logo file yet; the site sets their name in the site typeface. To add a partner, edit `partners` in `src/components/home/Partners.tsx`.
