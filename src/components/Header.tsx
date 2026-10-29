@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { asset } from "@/lib/site";
+import { asset, site } from "@/lib/site";
 
 const links = [
   { label: "Project", href: "/project/" },
@@ -35,9 +35,18 @@ export default function Header() {
       }`}
     >
       <div className="wrap flex h-16 items-center justify-between gap-6">
-        <Link href="/" className="shrink-0" aria-label="SPAIS home" onClick={() => setOpen(false)}>
+        <Link
+          href="/"
+          className="flex shrink-0 flex-col gap-1.5"
+          aria-label={`${site.name} home`}
+          onClick={() => setOpen(false)}
+        >
           {/* eslint-disable-next-line @next/next/no-img-element -- static export */}
-          <img src={asset("brand/spais-wordmark-white.png")} alt="SPAIS" width={112} height={18} className="h-auto w-[104px] sm:w-[112px]" />
+          <img src={asset("brand/spais-wordmark-white.png")} alt="" width={140} height={22} className="h-auto w-[140px]" />
+          {/* 10px text spans the 140px wordmark, so the two read as one lockup. */}
+          <span className="whitespace-nowrap text-[10px] leading-none text-white/60">
+            {site.fullName}
+          </span>
         </Link>
 
         <nav aria-label="Main navigation" className="hidden items-center gap-8 text-[15px] md:flex">
