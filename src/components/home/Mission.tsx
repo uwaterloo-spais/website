@@ -10,6 +10,19 @@ export default function Mission() {
             conversations in the field, we bring different disciplines together to learn, build,
             and ask better questions.
           </p>
+          <p className="lede mt-8 max-w-[640px] text-steel">
+            We’re supported by a group of PhD researchers at the University of Waterloo and work
+            with{" "}
+            <a
+              href="https://uwaterloo.ca/robohub/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-black underline underline-offset-4 hover:text-steel"
+            >
+              Waterloo RoboHub
+            </a>
+            , so members learn alongside people doing robotics and AI research every day.
+          </p>
           <p className="mt-12 flex flex-wrap gap-x-10 gap-y-2 text-[17px] text-steel">
             <span>Learn together.</span>
             <span>Build with purpose.</span>

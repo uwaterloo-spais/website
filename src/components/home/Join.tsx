@@ -13,6 +13,7 @@ const audiences = [
       "Meet the four technical teams",
       "Find a starting point that fits your interests",
       "Join conversations, visits, and hands-on learning",
+      "Learn from graduate researchers and Waterloo RoboHub",
     ],
     cta: { label: "Join us on Discord", href: site.links.discord, external: true },
   },
