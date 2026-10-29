@@ -30,12 +30,12 @@ export default function Hero({ farmAlbum }: { farmAlbum?: Album }) {
             agriculture, starting by listening to the people who grow our food.
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <a href={site.links.discord} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              Join us on Discord
-            </a>
-            <Link href="/project/" className="btn btn-ghost">
+            <Link href="/project/" className="btn btn-primary">
               See the project
             </Link>
+            <a href="#teams" className="btn btn-ghost">
+              Meet the teams
+            </a>
           </div>
         </div>
 

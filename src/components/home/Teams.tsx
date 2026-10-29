@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import RobotDiagram, { type RobotPart } from "@/components/RobotDiagram";
-import { site, teams } from "@/lib/site";
+import { teams } from "@/lib/site";
 
 export default function Teams() {
   const [selected, setSelected] = useState<RobotPart>("camera");
@@ -70,14 +70,6 @@ export default function Teams() {
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href={site.links.discord}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-primary-dark mt-7"
-                  >
-                    Talk to us on Discord
-                  </a>
                 </motion.div>
               </AnimatePresence>
             </div>
