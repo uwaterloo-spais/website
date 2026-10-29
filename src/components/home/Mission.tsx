@@ -1,10 +1,3 @@
-// The physical world AI has to work in. Land is where we're starting.
-const domains = [
-  { name: "Air", note: "Low to high altitude" },
-  { name: "Land", note: "Starting here, on farms", current: true },
-  { name: "Water", note: "Nearshore to deep sea" },
-];
-
 export default function Mission() {
   return (
     <section className="bg-white py-24 md:py-36" aria-label="Our mission">
@@ -14,26 +7,7 @@ export default function Mission() {
           <p className="display max-w-[900px] text-[clamp(30px,4.2vw,60px)] font-medium leading-[1.08]">
             A student-led community bringing AI off the screen and into the physical world.
           </p>
-
-          <ul className="mt-14 grid grid-cols-3 border-t border-black/10">
-            {domains.map((d) => (
-              <li
-                key={d.name}
-                className={`relative pt-5 pr-4 ${d.current ? "text-black" : "text-black/55"}`}
-              >
-                {d.current && (
-                  <span aria-hidden className="absolute -top-px left-0 h-0.5 w-full bg-signal" />
-                )}
-                <p className="h-card text-[clamp(22px,2.6vw,34px)]">{d.name}</p>
-                <p className="mt-2 text-[14px] md:text-[15px]">
-                  {d.current && <span className="sr-only">Current focus: </span>}
-                  {d.note}
-                </p>
-              </li>
-            ))}
-          </ul>
-
-          <p className="mt-12 max-w-[560px] text-[16px] leading-relaxed text-steel">
+          <p className="mt-10 max-w-[560px] text-[16px] leading-relaxed text-steel">
             Supported by PhD researchers at the University of Waterloo, in collaboration with{" "}
             <a
               href="https://uwaterloo.ca/robohub/"
@@ -44,6 +18,11 @@ export default function Mission() {
               Waterloo RoboHub
             </a>
             .
+          </p>
+          <p className="mt-12 flex flex-wrap gap-x-10 gap-y-2 text-[17px] text-steel">
+            <span>Learn together.</span>
+            <span>Build with purpose.</span>
+            <span>Think sustainably.</span>
           </p>
         </div>
       </div>
