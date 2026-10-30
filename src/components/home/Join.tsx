@@ -1,6 +1,5 @@
-import VisionFrame from "@/components/VisionFrame";
+import Photo from "@/components/Photo";
 import CopyEmail from "@/components/home/CopyEmail";
-import { detectionsFor } from "@/lib/detections";
 import { mailto, photo, site } from "@/lib/site";
 
 const audiences = [
@@ -85,13 +84,11 @@ export default function Join() {
         </div>
 
         <figure className="mt-20">
-          <VisionFrame
+          <Photo
             src={photo("team-cover", 1600)}
             alt="The SPAIS community together in front of the society’s presentation screen."
             width={2048}
             height={1152}
-            detections={detectionsFor("team-cover")}
-            mode="hover"
             className="rounded-2xl"
           />
           <figcaption className="mt-4 text-[15px] text-steel">Curiosity connects us. Purpose moves us.</figcaption>

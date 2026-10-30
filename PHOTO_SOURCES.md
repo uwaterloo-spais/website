@@ -19,9 +19,10 @@ The cover photo and logo were supplied by SPAIS. Other photos come from SPAIS’
 | `public/photos/upside-2-*.webp` | https://www.linkedin.com/posts/sustainable-physical-ai-society_physicalai-agriculturalrobotics-precisionagriculture-activity-7499169989447340032-wa6H |
 | `public/photos/intro-1-*.webp` | https://www.linkedin.com/posts/sustainable-physical-ai-society_physicalai-robotics-agriculturalrobotics-activity-7489158908243255297-hfRx |
 | `public/photos/intro-2-*.webp` | https://www.linkedin.com/posts/sustainable-physical-ai-society_physicalai-robotics-agriculturalrobotics-activity-7489158908243255297-hfRx |
+| `public/photos/cover-*.webp` | Cover illustration from the SPAIS term orientation deck (October 7, 2026), supplied by SPAIS |
 | `public/photos/team-cover-*.webp` | User-provided SPAIS team photo, uploaded October 27, 2026 |
 
-`src/components/RobotDiagram.tsx` (redrawn from the original `platform-concept.svg`) is a concept study, not a photograph of completed hardware.
+`src/components/RobotDiagram.tsx` is a concept drawing (a four-wheel field platform in the style of rugged research robots), not a photograph of completed hardware.
 
 ## Partner logos
 

@@ -52,7 +52,7 @@ export default function Partners() {
   const group = [...partners, ...partners, ...partners];
 
   return (
-    <section className="bg-mist py-24 md:py-32" aria-labelledby="partners-title">
+    <section id="community" className="bg-mist py-24 md:py-32" aria-labelledby="partners-title">
       <div className="wrap">
         <h2 id="partners-title" className="h-section max-w-[900px]">
           Learning alongside

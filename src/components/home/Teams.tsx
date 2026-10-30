@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import RobotDiagram, { type RobotPart } from "@/components/RobotDiagram";
@@ -17,11 +18,17 @@ export default function Teams() {
           <h2 id="teams-title" className="h-section">
             Four teams.
             <br />
-            One machine.
+            One robot.
           </h2>
-          <p className="lede text-steel">
-            Each team builds one part of the robot. Pick a part to meet the people behind it.
-          </p>
+          <div>
+            <p className="lede text-steel">
+              Our first project is a modular field robot, starting with agriculture. Each team builds one part of
+              it. Pick a part to meet the people behind it.
+            </p>
+            <Link href="/project/" className="mt-6 inline-block border-b border-black pb-1 text-[15px] font-medium hover:border-steel hover:text-steel">
+              Explore our project
+            </Link>
+          </div>
         </div>
 
         <div className="mt-14 grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
@@ -44,7 +51,7 @@ export default function Teams() {
                       }`}
                     >
                       <span className="h-card text-[19px]">{t.name}</span>
-                      <span className={`readout ${active ? "text-signal" : "text-black/45"}`}>{t.part}</span>
+                      <span className={`text-right text-[14px] ${active ? "text-white/70" : "text-black/50"}`}>{t.partLabel}</span>
                     </button>
                   </li>
                 );
@@ -60,8 +67,7 @@ export default function Teams() {
                   exit={reduced ? undefined : { opacity: 0, y: -8 }}
                   transition={{ duration: 0.25 }}
                 >
-                  <p className="text-[15px] text-steel">{team.partLabel}</p>
-                  <h3 className="h-card mt-2">{team.short}</h3>
+                  <h3 className="h-card">{team.short}</h3>
                   <p className="mt-4 text-[16px] leading-relaxed text-steel">{team.body}</p>
                   <ul className="mt-5 flex flex-wrap gap-2" aria-label="Skills">
                     {team.tags.map((tag) => (
@@ -77,8 +83,8 @@ export default function Teams() {
         </div>
 
         <p className="mt-16 max-w-[640px] text-[17px] text-steel">
-          <strong className="font-semibold text-black">New to robotics?</strong> You’re welcome here.
-          There’s room to learn, ask questions, and start small.
+          <strong className="font-semibold text-black">You don’t need to know everything.</strong> Bring
+          your curiosity and a willingness to learn with others.
         </p>
       </div>
     </section>

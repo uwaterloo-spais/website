@@ -6,8 +6,9 @@ import { useEffect, useState } from "react";
 import { asset, site } from "@/lib/site";
 
 const links = [
-  { label: "Project", href: "/project/" },
-  { label: "Teams", href: "/#teams" },
+  { label: "Mission", href: "/#mission" },
+  { label: "Events", href: "/#events" },
+  { label: "Our project", href: "/project/" },
   { label: "Community", href: "/#community" },
 ];
 
@@ -49,7 +50,7 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav aria-label="Main navigation" className="hidden items-center gap-8 text-[15px] md:flex">
+        <nav aria-label="Main navigation" className="hidden items-center gap-8 text-[15px] lg:flex">
           {links.map((l) => (
             <Link
               key={l.href}
@@ -61,12 +62,12 @@ export default function Header() {
             </Link>
           ))}
           <Link href="/#join" className="btn btn-primary min-h-10 px-5 text-[14px]">
-            Join SPAIS
+            Get involved
           </Link>
         </nav>
 
         <button
-          className="grid size-11 place-items-center md:hidden"
+          className="grid size-11 place-items-center lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close navigation" : "Open navigation"}
@@ -80,14 +81,14 @@ export default function Header() {
       </div>
 
       {open && (
-        <nav id="mobile-nav" aria-label="Mobile navigation" className="wrap flex flex-col gap-1 pb-6 md:hidden">
+        <nav id="mobile-nav" aria-label="Mobile navigation" className="wrap flex flex-col gap-1 pb-6 lg:hidden">
           {links.map((l) => (
             <Link key={l.href} href={l.href} onClick={() => setOpen(false)} className="display py-3 text-[28px]">
               {l.label}
             </Link>
           ))}
           <Link href="/#join" onClick={() => setOpen(false)} className="btn btn-primary mt-4">
-            Join SPAIS
+            Get involved
           </Link>
         </nav>
       )}

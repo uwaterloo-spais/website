@@ -2,8 +2,8 @@
 
 /*
  * SPAIS — "the robot's eye".
- * Black, white, and silver from the logo. One signal colour, used only for
- * what the machine "sees": detection boxes, labels, scan lines, focus.
+ * Black, white, and silver from the logo. One signal colour, used sparingly:
+ * the highlighted robot part, project status, and focus.
  */
 @theme {
   --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
@@ -24,6 +24,13 @@
   --animate-marquee: marquee 45s linear infinite;
   @keyframes marquee {
     to { transform: translateX(-50%); }
+  }
+
+  /* A highlight sweeping through the stage in progress on the status bar. */
+  --animate-progress: progress 1.8s ease-in-out infinite;
+  @keyframes progress {
+    from { background-position: -100% 0; }
+    to { background-position: 200% 0; }
   }
 }
 

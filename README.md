@@ -21,7 +21,7 @@ npm run build      # static site in out/
 | --- | --- |
 | Add a community update (event, visit, recap) | Add a Markdown file to `content/updates/` (copy an existing one) |
 | Event photos | `public/photos/` as `name-800.webp` and `name-1600.webp` |
-| Detection boxes drawn on photos | `src/lib/detections.ts` |
+| First project status tracker | `src/lib/project.ts` (change each stage’s `status`) |
 | Links, email, team descriptions | `src/lib/site.ts` |
 | Home page | `src/app/page.tsx` and `src/components/home/` |
 | Robotics project page | `src/app/project/page.tsx` and `src/components/project/` |
@@ -51,16 +51,6 @@ photos:
 ```
 
 The newest updates appear first.
-
-### Adding detection boxes
-
-The cyan "machine vision" boxes are hand-placed. Add an entry to `src/lib/detections.ts` keyed by the photo name. Each box is `[x, y, width, height]` in percent of the image:
-
-```ts
-"my-event-1": [{ label: "robot_platform", score: 0.93, box: [40, 35, 25, 30] }],
-```
-
-Photos without an entry simply show no overlay.
 
 ## Deployment
 

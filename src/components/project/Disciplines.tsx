@@ -8,28 +8,28 @@ import RobotDiagram, { type RobotPart } from "@/components/RobotDiagram";
 // focusing a discipline lights that part up, and tapping a part selects it.
 const disciplines: { part: RobotPart; area: string; title: string; body: string }[] = [
   {
-    part: "base",
+    part: "arm",
     area: "Mechanical",
-    title: "Mobile platform",
-    body: "A compact base designed around the terrain, crop access, and stability required by the chosen task.",
+    title: "Chassis and arm",
+    body: "A rugged four-wheel base and an arm designed around the terrain, crop access, and the chosen task.",
   },
   {
     part: "board",
     area: "Hardware",
-    title: "Power & interfaces",
-    body: "Motor control, power distribution, sensor connections, and dependable low-level operation.",
+    title: "Power and interfaces",
+    body: "Battery, motor control, power distribution, sensor connections, and a dependable emergency stop.",
   },
   {
     part: "camera",
     area: "Perception",
     title: "Visual understanding",
-    body: "Camera-based observation and target localisation, tested against real lighting and occlusion.",
+    body: "A front camera that tells crops from weeds and spots signs of disease, tested in real light and weather.",
   },
   {
-    part: "arm",
+    part: "base",
     area: "Control",
-    title: "Movement & task control",
-    body: "Positioning, controlled motion, and coordination between the platform and a task-specific tool.",
+    title: "Navigation and motion",
+    body: "Knowing where the robot is, planning routes along the rows, and moving reliably with feedback.",
   },
 ];
 

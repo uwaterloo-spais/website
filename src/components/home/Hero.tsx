@@ -1,58 +1,37 @@
 import Link from "next/link";
-import VisionFrame from "@/components/VisionFrame";
-import { GalleryButton, type Album } from "@/components/Gallery";
-import { detectionsFor } from "@/lib/detections";
+import Photo from "@/components/Photo";
 import { photo, site } from "@/lib/site";
 
-export default function Hero({ farmAlbum }: { farmAlbum?: Album }) {
-  const frame = (
-    <VisionFrame
-      src={photo("farm-2", 1600)}
-      alt="SPAIS members listening to their farm host beside a growing bed at Hoffman’s Strawberries."
-      width={800}
-      height={600}
-      detections={detectionsFor("farm-2")}
-      mode="scan"
-      priority
-      className="rounded-2xl"
-    />
-  );
-
+export default function Hero() {
   return (
     <section className="overflow-hidden bg-black pb-20 pt-12 text-white md:pb-28 md:pt-20" aria-labelledby="hero-title">
-      <div className="wrap grid items-center gap-12 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
+      <div className="wrap grid items-center gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
         <div>
-          <h1 id="hero-title" className="h-hero">
-            Bringing AI into the real world.
+          <h1 id="hero-title" className="h-hero max-w-[15ch] text-[clamp(40px,5vw,80px)]">
+            Bringing AI into the real world for a sustainable future.
           </h1>
           <p className="lede mt-8 max-w-[520px] text-silver">
-            One of Canada’s first student societies dedicated to Physical AI, run by students for
-            students. Started at the {site.university} and growing beyond it, we build intelligent
-            machines for the real world, with agriculture as our first project.
+            Founded at the {site.university}, we’re a growing student society dedicated to Physical AI.
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Link href="/project/" className="btn btn-primary">
-              See the project
+              Explore our project
             </Link>
-            <a href="#teams" className="btn btn-ghost">
-              Meet the teams
+            <a href="#join" className="btn btn-ghost">
+              Get involved
             </a>
           </div>
         </div>
 
-        <figure>
-          {farmAlbum ? (
-            <GalleryButton album={farmAlbum} index={1} label="Open photos from the Hoffman’s Strawberries visit">
-              {frame}
-            </GalleryButton>
-          ) : (
-            frame
-          )}
-          <figcaption className="readout mt-4 flex justify-between text-silver">
-            <span>hoffmans_strawberries / 2026-10-23</span>
-            <span className="hidden sm:inline">field_visit</span>
-          </figcaption>
-        </figure>
+        {/* The cover from our orientation deck: one intelligence across air, land, and water. */}
+        <Photo
+          src={photo("cover", 1600)}
+          alt="Illustration of a drone in the sky, a wheeled robot on a grassy field, and an underwater vehicle scanning the sea floor."
+          width={1190}
+          height={1322}
+          priority
+          className="mx-auto w-full max-w-[560px] rounded-2xl"
+        />
       </div>
     </section>
   );
