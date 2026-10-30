@@ -23,7 +23,7 @@ const disciplines: { part: RobotPart; area: string; title: string; body: string 
     part: "camera",
     area: "Perception",
     title: "Visual understanding",
-    body: "A front camera that tells crops from weeds and spots signs of disease, tested in real light and weather.",
+    body: "A front camera that spots signs of crop disease, tested in real light and weather.",
   },
   {
     part: "base",

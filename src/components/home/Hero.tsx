@@ -3,9 +3,13 @@ import Photo from "@/components/Photo";
 import { photo, site } from "@/lib/site";
 
 export default function Hero() {
+  // Fills the screen below the 64px header, so the cover stands on its own.
   return (
-    <section className="overflow-hidden bg-black pb-20 pt-12 text-white md:pb-28 md:pt-20" aria-labelledby="hero-title">
-      <div className="wrap grid items-center gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
+    <section
+      className="flex min-h-[calc(100svh-4rem)] items-center overflow-hidden bg-black py-12 text-white md:py-16"
+      aria-labelledby="hero-title"
+    >
+      <div className="wrap grid w-full items-center gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
         <div>
           <h1 id="hero-title" className="h-hero max-w-[15ch] text-[clamp(40px,5vw,80px)]">
             Bringing AI into the real world for a sustainable future.
@@ -30,7 +34,7 @@ export default function Hero() {
           width={1190}
           height={1322}
           priority
-          className="mx-auto w-full max-w-[560px] rounded-2xl"
+          className="mx-auto w-full max-w-[560px] rounded-2xl lg:max-w-[min(560px,calc((100svh-12rem)*0.9))]"
         />
       </div>
     </section>

@@ -71,9 +71,9 @@ export default function Approach({ farmAlbum }: { farmAlbum?: Album }) {
     <>
       <p>
         On October 23 we visited Hoffman’s Strawberries. The owner walked us through the work behind the harvest
-        and named two everyday pain points.
+        and named one everyday pain point.
       </p>
-      <Chips items={["Weeding", "Crop disease control"]} label="Needs we found" />
+      <Chips items={["Crop disease control"]} label="Need we found" />
       {farmAlbum && (
         <GalleryButton album={farmAlbum} index={1} label="Open photos from the Hoffman’s Strawberries visit" className="mt-6 max-w-[360px]">
           <Photo
@@ -98,7 +98,7 @@ export default function Approach({ farmAlbum }: { farmAlbum?: Album }) {
     </>,
     <>
       <p>
-        Our first use case is weeding and crop disease control, outdoors. We’ve set the greenhouse aside for now,
+        Our first use case is crop disease control, outdoors. We’ve set the greenhouse aside for now,
         so our early tests match the conditions of on-site trials at the farm.
       </p>
       <p className="mt-4">Measures of success we’re considering:</p>

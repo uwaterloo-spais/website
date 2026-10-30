@@ -6,7 +6,7 @@ const partners = [
   {
     name: "Upside Robotics",
     href: "https://upsiderobotics.com/",
-    role: "Providing robot batteries for our first prototype.",
+    role: "Providing certain equipment support for our first prototype.",
     logo: { src: "partners/upside-robotics.svg", width: 202, height: 24, className: "h-6 md:h-7" },
   },
   {

@@ -30,7 +30,7 @@ const domains = [
 
 const facts = [
   { term: "Project", value: "Modular field robot" },
-  { term: "First application", value: "Outdoor weeding and disease control" },
+  { term: "First application", value: "Outdoor crop disease control" },
   { term: "Near-term goal", value: "A testable, limited-scope prototype" },
 ];
 
