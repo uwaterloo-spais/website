@@ -1,3 +1,9 @@
+const values = [
+  { n: "01", label: "Learn together." },
+  { n: "02", label: "Build with purpose." },
+  { n: "03", label: "Think sustainably." },
+];
+
 export default function Mission() {
   return (
     <section id="mission" className="bg-white py-24 md:py-36" aria-label="Our mission">
@@ -15,11 +21,15 @@ export default function Mission() {
             Through field visits, exchanges with industry and academia, and hands-on engineering projects, we
             bring students from different disciplines together to learn, build, and grow.
           </p>
-          <p className="mt-12 flex flex-wrap gap-x-10 gap-y-2 text-[17px] text-steel">
-            <span>Learn together.</span>
-            <span>Build with purpose.</span>
-            <span>Think sustainably.</span>
-          </p>
+          {/* Three values: one row on desktop, stacked on mobile, each on its own ruled line. */}
+          <ul className="mt-14 grid max-w-[900px] gap-x-8 sm:grid-cols-3">
+            {values.map((v) => (
+              <li key={v.n} className="border-t border-black/10 py-5 sm:pt-6 sm:pb-0">
+                <span className="readout block text-steel/70">{v.n}</span>
+                <span className="h-card mt-3 block text-[20px] md:text-[22px]">{v.label}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

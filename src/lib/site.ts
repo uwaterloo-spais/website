@@ -5,7 +5,7 @@ export const site = {
   university: "University of Waterloo",
   url: "https://uwspais.ca",
   description:
-    "The Sustainable Physical AI Society is a student-led community at the University of Waterloo. Learn, build, and explore robotics for a sustainable future.",
+    "Founded at the University of Waterloo and growing beyond it, the Sustainable Physical AI Society is a student-led community bringing AI from the digital world into the real world. Learn, build, and explore Physical AI for a sustainable future.",
   email: "uwspais@gmail.com",
   links: {
     discord: "https://discord.gg/Pk7Rc78k5D",
